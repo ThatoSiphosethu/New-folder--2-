@@ -22,11 +22,8 @@ namespace EFPart1.DataModels
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-              IConfiguration config = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json", true, true)
-                .Build();
-                optionsBuilder.UseSqlServer(@config["BloggingContext:ConnectionString"]);
-            }
+            optionsBuilder.UseSqlServer(@"Server=bitsql.wctc.edu;Database=tramalepa_22097_Movie;User ID=tramalepa;Password=000558972;");
+        }
 
     }
 }
